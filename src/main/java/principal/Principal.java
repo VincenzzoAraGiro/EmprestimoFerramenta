@@ -9,4 +9,3 @@ public class Principal {
         objetotela.setVisible(true);
     }
 }
-//lucas
