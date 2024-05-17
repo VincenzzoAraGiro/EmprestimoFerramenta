@@ -34,14 +34,19 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         jMenuSobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Cadastro de Aluno ");
+        setTitle("Cadastro de Amigo ");
 
         jMenuArquivo.setText("Arquivo");
 
-        jMenuItem1.setText("Cadastrar Aluno");
+        jMenuItem1.setText("Cadastrar Amigo");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenuArquivo.add(jMenuItem1);
 
-        jMenuItem2.setText("Gerenciar Alunos");
+        jMenuItem2.setText("Gerenciar Amigos");
         jMenuArquivo.add(jMenuItem2);
 
         jMenuItem3.setText("Sair");
@@ -67,6 +72,12 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // Instancia a tela de Cadastro de Amigo
+        FrmCadastroAmigo objeto = new FrmCadastroAmigo();
+        objeto.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
