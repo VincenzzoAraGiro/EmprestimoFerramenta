@@ -1,18 +1,18 @@
 package modelo;
 
 import java.util.ArrayList;
-import dao.AlunoDAO;
+import dao.AmigoDAO;
 
-public class Aluno extends Pessoa{
+public class Amigo extends Ferramenta{
     
     private String curso;
     private int fase;
     // Construtor de Objeto Vazio
-    public Aluno(){
+    public Amigo(){
         this(0,"",0,"",0);
     }
     // Construtor com parâmetro
-    public Aluno(int id,String nome, int idade, String curso, int fase){
+    public Amigo(int id,String nome, int idade, String curso, int fase){
         super(id, nome, idade);
         this.curso = curso;
         this.fase = fase;
@@ -39,29 +39,29 @@ public class Aluno extends Pessoa{
     /* ABAIXO OS MÉTODOS PARA USO JUNTO COM O DAO SIMULANDO A ESTRUTURA EM 
     CAMADAS PARA USAR COM BANCOS DE DADOS. */
     // Retorna a lista de Alunos(objetos)
-    public ArrayList<Aluno> getMinhaLista() {
-        return AlunoDAO.getMinhaLista();
+    public ArrayList<Amigo> getMinhaLista() {
+        return AmigoDAO.getMinhaLista();
     }
 
     
     // Cadastra novo aluno
-    public boolean insertAlunoBD(String nome, int idade, String curso, int fase) {
+    public boolean insertAmigoBD(String nome, int idade, String curso, int fase) {
         int id = this.maiorID() + 1;
-        Aluno objeto = new Aluno(id, nome, idade,curso, fase);
+        Amigo objeto = new Amigo(id, nome, idade,curso, fase);
         getMinhaLista().add(objeto);
     return true;
     }
     
     // Deleta um aluno específico pelo seu campo ID
-    public boolean deleteAlunoBD(int id){
+    public boolean deleteAmigoBD(int id){
         int indice = this.procuraIndice(id);
         getMinhaLista().remove(indice);
         return true;
     }
     
     // Edita um aluno específico pelo seu campo ID
-    public boolean updateAlunoBD(int id, String nome, int idade, String curso, int fase){
-        Aluno objeto = new Aluno(id, nome, idade, curso, fase);
+    public boolean updateAmigoBD(int id, String nome, int idade, String curso, int fase){
+        Amigo objeto = new Amigo(id, nome, idade, curso, fase);
         int indice = this.procuraIndice(id);
         getMinhaLista().set(indice, objeto);
         return true;
@@ -76,14 +76,14 @@ public class Aluno extends Pessoa{
     }
 return indice;
 }
-    // Carrega dados de um aluno especifico pelo seu ID
-    public Aluno carregaAluno(int id){
+    // Carrega dados de um amigo especifico pelo seu ID
+    public Amigo carregaAmigo(int id){
         int indice = this.procuraIndice(id);
         return getMinhaLista().get(indice);
     }
     // Retorna o maior ID da nossa base de dados
     public int maiorID(){
-        return AlunoDAO.maiorID();
+        return AmigoDAO.maiorID();
     }
         
 

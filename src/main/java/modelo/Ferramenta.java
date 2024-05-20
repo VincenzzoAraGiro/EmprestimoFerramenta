@@ -1,6 +1,6 @@
 package modelo;
 
-public class Pessoa {
+public class Ferramenta {
     
     //Atributos
     private int id;
@@ -8,12 +8,12 @@ public class Pessoa {
     private int idade;
     
     //Construtor de Objeto Vazio
-    public Pessoa(){
+    public Ferramenta(){
         this(0,"",0);
     }
     
     //Construtor de Objeto, com parâmetro
-    public Pessoa(int id,String nome,int idade){
+    public Ferramenta(int id,String nome,int idade){
         this.id = id;
         this.nome = nome;
         this.idade = idade;
