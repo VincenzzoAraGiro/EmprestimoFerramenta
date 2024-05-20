@@ -28,29 +28,44 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuArquivo = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItemCadastrarAmigo = new javax.swing.JMenuItem();
+        jMenuItemGerenciarAmigos = new javax.swing.JMenuItem();
+        jMenuItemSair = new javax.swing.JMenuItem();
         jMenuSobre = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro de Amigo ");
 
         jMenuArquivo.setText("Arquivo");
-
-        jMenuItem1.setText("Cadastrar Amigo");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuArquivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuArquivoActionPerformed(evt);
             }
         });
-        jMenuArquivo.add(jMenuItem1);
 
-        jMenuItem2.setText("Gerenciar Amigos");
-        jMenuArquivo.add(jMenuItem2);
+        jMenuItemCadastrarAmigo.setText("Cadastrar Amigo");
+        jMenuItemCadastrarAmigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastrarAmigoActionPerformed(evt);
+            }
+        });
+        jMenuArquivo.add(jMenuItemCadastrarAmigo);
 
-        jMenuItem3.setText("Sair");
-        jMenuArquivo.add(jMenuItem3);
+        jMenuItemGerenciarAmigos.setText("Gerenciar Amigos");
+        jMenuItemGerenciarAmigos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemGerenciarAmigosActionPerformed(evt);
+            }
+        });
+        jMenuArquivo.add(jMenuItemGerenciarAmigos);
+
+        jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
+        jMenuArquivo.add(jMenuItemSair);
 
         jMenuBar1.add(jMenuArquivo);
 
@@ -73,11 +88,24 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItemCadastrarAmigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadastrarAmigoActionPerformed
         // Instancia a tela de Cadastro de Amigo
         FrmCadastroAmigo objeto = new FrmCadastroAmigo();
         objeto.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItemCadastrarAmigoActionPerformed
+
+    private void jMenuArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuArquivoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuArquivoActionPerformed
+
+    private void jMenuItemGerenciarAmigosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerenciarAmigosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemGerenciarAmigosActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        // Encerra o programa
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,9 +145,9 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenuArquivo;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItemCadastrarAmigo;
+    private javax.swing.JMenuItem jMenuItemGerenciarAmigos;
+    private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenu jMenuSobre;
     // End of variables declaration//GEN-END:variables
 }

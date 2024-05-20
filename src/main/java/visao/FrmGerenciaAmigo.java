@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package visao;
 
-/**
- *
- * @author Meu Computador
- */
 public class FrmGerenciaAmigo extends javax.swing.JFrame {
 
     /**
@@ -37,6 +29,7 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         JBApagar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gerenciador de Amigos");
 
         JTableAmigos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -56,6 +49,11 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
         jLabel2.setText("Telefone");
 
         JBCancelar.setText("Cancelar");
+        JBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBCancelarActionPerformed(evt);
+            }
+        });
 
         JBAlterar.setText("Alterar");
 
@@ -108,6 +106,11 @@ public class FrmGerenciaAmigo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
+        // Libera todos os recursos da interface gráfica
+        this.dispose();
+    }//GEN-LAST:event_JBCancelarActionPerformed
 
     /**
      * @param args the command line arguments
