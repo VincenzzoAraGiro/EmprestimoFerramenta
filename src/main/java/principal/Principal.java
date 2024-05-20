@@ -7,6 +7,5 @@ public class Principal {
         FrmMenuPrincipal objetotela = new FrmMenuPrincipal();
         // Instancia a interface gráfica
         objetotela.setVisible(true);
-        // Torna janela visível
     }
 }
